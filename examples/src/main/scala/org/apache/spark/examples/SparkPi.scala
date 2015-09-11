@@ -15,6 +15,7 @@
  * limitations under the License.
  */
 
+
 // scalastyle:off println
 package org.apache.spark.examples
 
@@ -22,7 +23,12 @@ import scala.math.random
 
 import org.apache.spark._
 
-/** Computes an approximation to pi */
+/** 
+ * Computes an approximation to pi 
+ * We are basically counting the total number of squares in the graph paper that lie within a circle.
+ * How do we check if a square is lieing in the circle? By check for pythagoras theorm.
+ * Have a look at the following: https://en.wikipedia.org/wiki/Approximations_of_%CF%80#Summing_a_circle.27s_area
+*/
 object SparkPi {
   def main(args: Array[String]) {
     val conf = new SparkConf().setAppName("Spark Pi")
